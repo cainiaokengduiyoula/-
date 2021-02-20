@@ -1,0 +1,11 @@
+<!--components/Test/Test.wxml-->
+<view bindtap="test">components/Test/Test.wxml</view>
+<view>
+    <slot></slot>
+</view>
+<view>{{aaa}}</view>
+  
+
+  
+  
+

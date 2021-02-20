@@ -1,0 +1,51 @@
+page {
+  height: 100vh;
+}
+.category {
+  height: 100%;
+}
+.category .category_container {
+  display: flex;
+  height: calc( 100% - 70rpx );
+}
+.category .category_container .menu {
+  flex: 1.5;
+  font-size: 30rpx;
+  text-align: center;
+  background-color: #ECEBE7;
+}
+.category .category_container .menu .menu_item {
+  padding: 15rpx 0;
+  margin: 5rpx 0;
+  text-align: center;
+  background-color: #F4F4F4;
+}
+.category .category_container .menu .active {
+  border-left: 3px solid red;
+  color: red;
+}
+.category .category_container .goods {
+  flex: 3.5;
+  background-color: #FFFFFF;
+}
+.category .category_container .goods .goods_item .item_title {
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.category .category_container .goods .goods_item .item_title .delimiter {
+  padding: 0 10rpx;
+  color: #ccc;
+}
+.category .category_container .goods .goods_item .products {
+  display: flex;
+  flex-wrap: wrap;
+}
+.category .category_container .goods .goods_item .products .products_item {
+  width: 33.33%;
+  text-align: center;
+}
+.category .category_container .goods .goods_item .products .products_item image {
+  width: 70%;
+}

@@ -1,0 +1,25 @@
+<!--pages/demo04/demo04.wxml-->
+<text>pages/demo04/demo04.wxml</text>
+
+<view>自定义组件</view>
+<view>先创建组件，然后在demo04.js中使用</view>
+<!--
+    父传子和vue相同，但子组件中的properties定义的值使用 value
+    子传父使用 this.triggerEvent("事件名",参数)
+    父接收子事件  在标签添加属性 bind事件名="父组件中的方法"
+    在组件修改data中的值 使用 this.setData({ name: '吴彦祖' })
+          修改data中对象的某个属性
+          this.setData({ 'obj.name': '吴彦祖' })
+          this.setData({
+              obj: {
+                  name: '吴彦祖'
+              }
+          }) 
+-->
+<Test aaa="{{str}}" binditemChange="handleItemChange">
+    <view>
+        使用插槽
+    </view>
+      
+</Test>
+  

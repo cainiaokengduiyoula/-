@@ -1,0 +1,51 @@
+.collect {
+  .collect_list {
+    margin-top: 10rpx;
+    .list_item {
+      padding: 10rpx;
+      .item_info {
+          display: flex;
+          justify-content: center;
+          align-self: center;
+        .info_img {
+            flex: 2;
+            text-align: center;
+          image {
+              width: 80%;
+          }
+        }
+
+        .info_content {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            flex: 4;
+          .info_name {
+              display: -webkit-box;
+               overflow: hidden;
+              -webkit-box-orient: vertical;
+              -webkit-line-clamp:2;
+              color: #666;
+          }
+
+          .info_money_wrap {
+              display: flex;
+              justify-content: space-between;
+            .info_money {
+              color: var(--themeColor);
+            }
+
+            .info_tool {
+                display: flex;
+                justify-content: space-around;
+            }
+          }
+        }
+      }
+
+      &:not(:last-of-type) {
+          border-bottom: 1rpx solid #c4c4c4;
+        }
+    }
+  }
+}

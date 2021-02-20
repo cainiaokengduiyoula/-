@@ -1,0 +1,39 @@
+/* pages/demo03/demo03.wxss */
+
+/*
+    引入样式
+    @import "路径"
+*/
+/*
+    1、小程序中 不需要link来引入样式文件
+    2、需要把页面中某些元素的单位 由 px 改成 rpx
+				rpx单位是微信小程序中css的尺寸单位，rpx可以根据屏幕宽度进行自适应,规定屏幕宽为750rpx
+        1.设计稿 750px
+          750px = 750rpx      1px = 1rpx
+        2.把屏幕改成375px
+          375px = 750rpx      1px = 2rpx
+    3、存在一个设计稿 宽度 414 或者 未知 page
+        1. 设计稿 page 存在一个元素 宽度 100px
+        2.拿以上需求 去实现 不同宽度的页面适配
+
+        page px = 750 rpx
+        1px = 750rpx / page
+        100px = 750rpx *100 /page
+    4、利用一个css属性 calc()
+*/
+view {
+    width: calc( 750rpx * 200 / 375 );
+    height: calc( 750rpx * 200 / 375 );
+    font-size: calc( 750px * 20 / 375 );
+    background-color: yellow;
+}
+
+/* 
+    原生小程序不支持less
+    解决： 在vscode中安装插件easy less
+           在vscode的设置中配置
+            "less.compile": {
+                "outExt": ".wxss"
+            }
+            新建less文件正常编辑
+ */

@@ -1,0 +1,27 @@
+<!--pages/goods_list/index.wxml-->
+<view class="goods_list">
+    <!--搜索框开始-->
+    <SearchInput></SearchInput>
+    <!--搜索框结束-->
+    <!-- 标题框开始 -->
+     <Tabs titles="{{titles}}" bindhandleTitle="getCurrentIndex"></Tabs>
+    <!-- 标题框结束-->
+    <!--商品列表开始-->
+    <view class="product_wrap">
+        <navigator class="product" wx:for="{{goods}}"  wx:key="goods_id" url="/pages/goods_detail/index?goods_id={{item.goods_id}}">
+            <view class="product_img">
+                <image mode="widthFix" src="{{item.goods_small_logo?item.goods_small_logo:'https://ww1.sinaimg.cn/large/007rAy9hgy1g24by9t530j30i20i2glm.jpg'}}" />
+            </view>
+            <view class="product_info">
+                <view class="info_title">
+                    {{item.goods_name}}
+                </view>
+                <view class="info_money">
+                    ￥{{item.goods_price}}
+                </view>
+            </view>
+        </navigator>
+    </view>
+    <!-- 商品列表结束 -->
+</view>
+  

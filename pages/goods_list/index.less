@@ -1,0 +1,29 @@
+.product {
+    display: flex;
+    border: 1px solid #E4E4E4;
+    .product_img {
+        flex: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        image{
+          width: 70%;
+        }
+    }
+    .product_info {
+        flex: 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        .info_title {
+            display: -webkit-box;
+            overflow: hidden;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp:2;
+        }
+        .info_money {
+            color: var(--themeColor);
+            font-size: 32rpx;
+        }
+    }
+}

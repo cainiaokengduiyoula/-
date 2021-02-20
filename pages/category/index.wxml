@@ -1,0 +1,28 @@
+<!--pages/category/index.wxml-->
+<view class="category">
+    <!--搜索框开始-->
+    <SearchInput></SearchInput>
+    <!--搜索框结束-->
+
+    <view class="category_container">
+        <scroll-view class="menu" scroll-y="true">
+            <view class="menu_item {{currentIndex === index? 'active' : ''}}" wx:for="{{menu}}" wx:key="*this" bindtap="handleMenu" data-index="{{index}}">{{item}}</view>
+        </scroll-view>
+        <scroll-view class="goods" scroll-y="true" scroll-top="{{scrollTop}}">
+            <view class="goods_item" wx:for="{{list}}" wx:key="cat_name">
+                <view class="item_title">
+                    <text class="delimiter">/</text>
+                    <view class="cat-name">{{item.cat_name}}</view>
+                    <text class="delimiter">/</text>   
+                </view>
+                <view class="products">
+                    <navigator class="products_item" wx:for="{{item.children}}" wx:for-item="product" wx:key="cat_id" url="/pages/goods_list/index?cid={{product.cat_id}}">
+                        <image mode="widthFix" src="{{product.cat_icon}}" />
+                        <view>{{product.cat_name}}</view>
+                    </navigator>
+                </view>
+            </view> 
+        </scroll-view>
+    </view>
+</view>
+  

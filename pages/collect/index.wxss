@@ -1,0 +1,45 @@
+.collect .collect_list {
+  margin-top: 10rpx;
+}
+.collect .collect_list .list_item {
+  padding: 10rpx;
+}
+.collect .collect_list .list_item .item_info {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+.collect .collect_list .list_item .item_info .info_img {
+  flex: 2;
+  text-align: center;
+}
+.collect .collect_list .list_item .item_info .info_img image {
+  width: 80%;
+}
+.collect .collect_list .list_item .item_info .info_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex: 4;
+}
+.collect .collect_list .list_item .item_info .info_content .info_name {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  color: #666;
+}
+.collect .collect_list .list_item .item_info .info_content .info_money_wrap {
+  display: flex;
+  justify-content: space-between;
+}
+.collect .collect_list .list_item .item_info .info_content .info_money_wrap .info_money {
+  color: var(--themeColor);
+}
+.collect .collect_list .list_item .item_info .info_content .info_money_wrap .info_tool {
+  display: flex;
+  justify-content: space-around;
+}
+.collect .collect_list .list_item:not(:last-of-type) {
+  border-bottom: 1rpx solid #c4c4c4;
+}

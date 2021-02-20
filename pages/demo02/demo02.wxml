@@ -1,0 +1,27 @@
+<!--pages/demo02/demo02.wxml-->
+<text>pages/demo02/demo02.wxml</text>
+<view>小程序中的事件</view>
+
+<view>输入事件</view>  
+<input bindinput="inputEvent" />
+<view>{{str}}</view>
+
+<view>点击事件</view>
+<view>
+    <!--在小程序中tap就是click-->
+    <!--
+    在小程序中无法直接进行传参，会当成方法 increment(1) 来使用
+    <button bindtap="increment(1)">+</button>
+    <button bindtap="decrease(2)">-</button>
+    -->
+    <!--正确的传参方式添加自定义属性-->
+    <button bindtap="tapEvent" data-operation="{{1}}">+</button>
+    <button bindtap="tapEvent" data-operation="{{-1}}">-</button>
+</view>
+<view>{{num}}</view>
+  
+  
+
+  
+  
+  

@@ -1,0 +1,143 @@
+page {
+    padding-bottom: 90rpx;
+}
+.cart {
+    .address {
+        width: 100vw;
+        border-bottom: 3rpx solid #c4c4c4;
+      .address_tool {
+        padding: 20rpx;
+        button {
+            width: 60%;
+        }
+      }
+      .user_info_wrap {
+        padding: 20rpx;
+        .user_info {
+          display: flex;
+          justify-content: space-between;
+          margin: 10rpx 0;
+        }
+      }
+    }
+  
+    .cart_list {
+      .list_item {
+        display: flex;
+        padding: 10rpx;
+        .select {
+            display: flex;
+            justify-content: center;
+            align-self: center;
+            flex: 1;
+          checkbox-group {
+            checkbox {
+  
+            }
+          }
+        }
+  
+        .item_info {
+            flex: 9;
+            display: flex;
+            justify-content: center;
+            align-self: center;
+          .info_img {
+              flex: 2;
+              text-align: center;
+            image {
+                width: 80%;
+            }
+          }
+  
+          .info_content {
+              display: flex;
+              flex-direction: column;
+              justify-content: space-around;
+              flex: 4;
+            .info_name {
+                display: -webkit-box;
+                 overflow: hidden;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp:2;
+                color: #666;
+            }
+  
+            .info_money_wrap {
+                display: flex;
+                justify-content: space-between;
+              .info_money {
+                color: var(--themeColor);
+              }
+  
+              .info_tool {
+                  display: flex;
+                  justify-content: space-around;
+                .num_edit {
+                    width: 55rpx;
+                    height: 55rpx;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: 1rpx solid #ccc;
+                }
+                .info_num {
+                    width: 55rpx;
+                    height: 55rpx;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+              }
+            }
+          }
+        }
+
+        &:not(:last-of-type) {
+            border-bottom: 1rpx solid #c4c4c4;
+          }
+      }
+    }
+  
+    .footer_tool {
+        position: fixed;
+        bottom: 0;
+        display: flex;
+        width: 100vw;
+        z-index: 9;
+        background-color: #fff;
+      .all_select {
+          flex: 2;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        checkbox-group {
+          checkbox {
+            
+          }
+        }
+      }
+  
+      .total_money_wrap {
+          flex: 3;
+          flex-direction: column;
+          padding-right: 15rpx;
+          text-align: right;
+        .total_money {
+            font-size: 34rpx;
+          .total_money_text {
+            color: var(--themeColor);
+          }
+        }
+      }
+      .tool_pay {
+        flex: 2;
+        background-color: var(--themeColor);
+        color: #fff;
+        font-size: 32rpx;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }

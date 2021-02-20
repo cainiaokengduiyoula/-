@@ -1,0 +1,9 @@
+<!--components/Tabs/Tabs.wxml-->
+<view class="tabs">
+    <view class="title-item {{currentIndex===index?'active':''}}" wx:for="{{titles}}" wx:key="*this" bindtap="handleTitle" data-index="{{index}}">{{item}}</view>
+</view>
+  
+
+  
+  
+
