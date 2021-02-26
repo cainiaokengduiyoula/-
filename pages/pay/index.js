@@ -61,7 +61,6 @@ Page({
         method: "POST", 
         data: orderParams 
       });
-      console.log(order_number)
       // 5 发起 预支付接口
       const { pay } = await request({ 
         url: "/my/orders/req_unifiedorder",
@@ -81,10 +80,18 @@ Page({
       // 8 手动删除缓存中 已经支付了的商品
       const newCart = this.data.cartList.filter(item => !item.checked);
       wx.setStorageSync("cartList", newCart);
-      // 9 支付成功了 跳转到订单页面
-      wx.navigateTo({
-        url: '/pages/order/index'
-      });
+
+      setTimeout(function() {
+        // 9 支付成功了 跳转到订单页面
+        wx.navigateTo({
+          url: '/pages/order/index'
+        });
+      },500);
+
+      // // 9 支付成功了 跳转到订单页面
+      // wx.navigateTo({
+      //   url: '/pages/order/index'
+      // });
     }catch (error) {
       await showToast({ title: "支付失败" });
       console.log(error);

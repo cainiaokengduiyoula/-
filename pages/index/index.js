@@ -23,7 +23,6 @@ Page({
     request({
       url: "/home/swiperdata"
     }).then(res => {
-      console.log(res);
       res.forEach(item => {
         item.navigator_url = item.navigator_url.replace('/main?','/index?');
       })

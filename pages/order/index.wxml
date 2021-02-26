@@ -2,8 +2,8 @@
 <view class="order">
     <Tabs class="tabs" titles="{{titles}}" currentIndex="{{currentIndex}}" bindhandleTitle="getCurrentIndex"></Tabs>
     <view class="order_main">
-        <view wx:for="{{orders}}" wx:key="order_id" class="order_item">
-            <view class="order_no_row">
+        <view wx:for="{{orders}}" wx:key="order_id" class="order_item" bindtap="handleGoodClick" data-index="{{index}}">
+            <view class="order_no_row"> 
                 <view class="order_no_text">订单编号</view>
                 <view class="order_no_value">{{item.order_number}}</view>
             </view>

@@ -26,7 +26,7 @@ Page({
     const res = await request({ 
       url: "/my/orders/all", 
       data: { type } 
-    });
+    })
     this.setData({
       orders: res.orders.map( v => ({
           ...v,
@@ -36,10 +36,17 @@ Page({
       )
     })
   },
-  getCurrentIndex(e) {
+  getCurrentIndex({detail}) {
     this.setData({
-      currentIndex: e.detail
+      currentIndex: detail
     });
     this.getOrders(this.data.currentIndex+1);
+  },
+  handleGoodClick(e) {
+    let { index } = e.currentTarget.dataset
+    wx.setStorageSync('order_item', this.data.orders[index]);
+    wx.navigateTo({
+      url: '/pages/order_list/index'
+    })
   }
 })

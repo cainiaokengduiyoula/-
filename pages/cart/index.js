@@ -19,13 +19,20 @@ Page({
   // 获取地址
   async handleChooseAddress(e) {
     try {
-      let address = await chooseAddress();
-      if(address.cityName) {
-        address.all = address.provinceName + address.cityName + address.countyName + address.detailInfo;
-        this.setData({
-          address
+      let userInfo = wx.getStorageSync('userInfo');
+      if(!userInfo) {
+        wx.navigateTo({
+          url: '/pages/auth/index'
         });
-        wx.setStorageSync('address', address);
+      }else {
+        let address = await chooseAddress();
+        if(address.cityName) {
+          address.all = address.provinceName + address.cityName + address.countyName + address.detailInfo;
+          this.setData({
+            address
+          });
+          wx.setStorageSync('address', address);
+        }
       }
     }catch (error) {
       console.log(error);

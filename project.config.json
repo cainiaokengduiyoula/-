@@ -4,7 +4,7 @@
     "ignore": []
   },
   "setting": {
-    "urlCheck": false,
+    "urlCheck": true,
     "es6": true,
     "enhance": true,
     "postcss": true,
@@ -111,6 +111,12 @@
         {
           "name": "搜索",
           "pathName": "pages/search/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/order_list/index",
+          "pathName": "pages/order_list/index",
           "query": "",
           "scene": null
         }

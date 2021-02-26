@@ -8,7 +8,8 @@ Page({
   async handleGetUserInfo(e) {
     try {
       // 1 获取用户信息
-      const { encryptedData, rawData, iv, signature } = e.detail;
+      const { encryptedData, rawData, iv, signature, userInfo } = e.detail;
+      wx.setStorageSync('userInfo',userInfo);
       // 2 获取小程序登录成功后的code
       const { code } = await login();
       const loginParams={ encryptedData, rawData, iv, signature ,code};

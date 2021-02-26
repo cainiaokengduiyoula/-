@@ -102,5 +102,11 @@ Page({
       // true 防止用户 手抖 疯狂点击按钮 
       mask: true
     })
+  },
+  handleShop(e) {
+    this.handleCartAdd();
+    wx.switchTab({
+      url: '/pages/cart/index',
+    });
   }
 })

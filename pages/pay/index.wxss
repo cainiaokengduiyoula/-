@@ -5,12 +5,6 @@ page {
   width: 100vw;
   border-bottom: 3rpx solid #c4c4c4;
 }
-.pay .address .address_tool {
-  padding: 20rpx;
-}
-.pay .address .address_tool button {
-  width: 60%;
-}
 .pay .address .user_info_wrap {
   padding: 20rpx;
 }
@@ -20,17 +14,9 @@ page {
   margin: 10rpx 0;
 }
 .pay .cart_list .list_item {
-  display: flex;
   padding: 10rpx;
 }
-.pay .cart_list .list_item .select {
-  display: flex;
-  justify-content: center;
-  align-self: center;
-  flex: 1;
-}
 .pay .cart_list .list_item .item_info {
-  flex: 9;
   display: flex;
   justify-content: center;
   align-self: center;
@@ -66,21 +52,6 @@ page {
   display: flex;
   justify-content: space-around;
 }
-.pay .cart_list .list_item .item_info .info_content .info_money_wrap .info_tool .num_edit {
-  width: 55rpx;
-  height: 55rpx;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1rpx solid #ccc;
-}
-.pay .cart_list .list_item .item_info .info_content .info_money_wrap .info_tool .info_num {
-  width: 55rpx;
-  height: 55rpx;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .pay .cart_list .list_item:not(:last-of-type) {
   border-bottom: 1rpx solid #c4c4c4;
 }
@@ -91,12 +62,6 @@ page {
   width: 100vw;
   z-index: 9;
   background-color: #fff;
-}
-.pay .footer_tool .all_select {
-  flex: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .pay .footer_tool .total_money_wrap {
   flex: 3;

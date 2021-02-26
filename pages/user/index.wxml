@@ -8,9 +8,12 @@
             <view class="user_name">{{userInfo.nickName}}</view>
             </view>
         </view>
+        <!--
         <view wx:else class="user_btn">
             <navigator url="/pages/login/index" >登录</navigator>
         </view>
+        -->
+        <navigator wx:else class="user_btn" url="/pages/auth/index" >登录</navigator>
     </view>
     <view class="user_content">
        <view class="user_main">

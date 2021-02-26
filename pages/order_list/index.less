@@ -1,20 +1,7 @@
 page {
     padding-bottom: 90rpx;
 }
-.pay {
-    .address {
-        width: 100vw;
-        border-bottom: 3rpx solid #c4c4c4;
-        .user_info_wrap {
-          padding: 20rpx;
-          .user_info {
-            display: flex;
-            justify-content: space-between;
-            margin: 10rpx 0;
-          }
-        }
-      }
-  
+.order_list {
     .cart_list {
       .list_item {
         padding: 10rpx;
@@ -63,35 +50,36 @@ page {
           }
       }
     }
-  
     .footer_tool {
-        position: fixed;
-        bottom: 0;
+      position: fixed;
+      bottom: 0;
+      display: flex;
+      width: 100vw;
+      height: 90rpx;
+      z-index: 9;
+      background-color: #fff;
+    .total_money_wrap {
+        flex: 3;
+        padding-right: 15rpx;
         display: flex;
-        width: 100vw;
-        z-index: 9;
-        background-color: #fff;
-
-      .total_money_wrap {
-          flex: 3;
-          flex-direction: column;
-          padding-right: 15rpx;
-          text-align: right;
-        .total_money {
-            font-size: 34rpx;
-          .total_money_text {
-            color: var(--themeColor);
-          }
+        justify-content: flex-end;
+        align-items: center;
+        text-align: right;
+      .total_count {
+          font-size: 34rpx;
+        .total_count_text {
+          color: var(--themeColor);
         }
       }
-      .tool_pay {
-        flex: 2;
-        background-color: var(--themeColor);
-        color: #fff;
-        font-size: 32rpx;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
+    }
+    .total_money {
+      flex: 2;
+      background-color: var(--themeColor);
+      color: #fff;
+      font-size: 32rpx;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
+}
